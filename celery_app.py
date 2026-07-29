@@ -7,4 +7,8 @@ celery = Celery(
     include=["tasks"]
 )
 
+# syntax -> include["file_name_in_which_tasks_created" .......]
+## include=[ "email_tasks" , "ai_tasks" , "report_tasks"]
+# we have to mention every task file name in which task's will create
+
 ### redis://localhost:6379/0 -> this zero is database in redis there are many databases present in the redis.

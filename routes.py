@@ -21,6 +21,9 @@ def chat(request : ChatRequest):
 #syntax -> function_name.delay(function_argument)
 # delay() -> this function will sends the function and argument to the celery worker for execution 
 
+#syntax -> AsyncResult(celery-job-id , app = celery)
+# this method returns the task result of task_id (jo bhi task_id pass karoge usko result return karega ye function)
+# .ready( -> this function returns the status of that task result.
 
 @router.get("/chat_result")
 def chat_result(request : ChatRequestId):
